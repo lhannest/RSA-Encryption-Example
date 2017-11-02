@@ -21,8 +21,8 @@ z = (p - 1) * (q - 1)
 e = findRelativePrime(z)
 d = find_D(e, z)
 
-print 'private key:', (n, e)
-print 'public key:', (n, d)
+print ('private key:', (n, e))
+print ('public key:', (n, d))
 
 # The message must be an integer less than n-1. Convert an English message into a binary string,
 # and then convert that binary string into an integer. As long as these conversion methods are a bijective mapping, and
