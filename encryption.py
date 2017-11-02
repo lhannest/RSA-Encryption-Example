@@ -28,11 +28,11 @@ print 'public key:', (n, d)
 # and then convert that binary string into an integer. As long as these conversion methods are a bijective mapping, and
 # the recipiant is using the same methods as you, then everything will work out!
 message = 32423
-print 'message (must be < ' + str(n) + '-1):', message
+print ('message (must be < ' + str(n) + '-1):', message)
 
 encrypted_message = (message**e) % n
-print 'encrypted message:', encrypted_message
+print ('encrypted message:', encrypted_message)
 
 decrypted_message = (encrypted_message**d) % n
-print 'decrypted message:', decrypted_message
+print ('decrypted message:', decrypted_message)
 
