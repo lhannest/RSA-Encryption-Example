@@ -21,18 +21,18 @@ z = (p - 1) * (q - 1)
 e = findRelativePrime(z)
 d = find_D(e, z)
 
-print 'private key:', (n, e)
-print 'public key:', (n, d)
+print ('private key:', (n, e))
+print ('public key:', (n, d))
 
 # The message must be an integer less than n-1. Convert an English message into a binary string,
 # and then convert that binary string into an integer. As long as these conversion methods are a bijective mapping, and
 # the recipiant is using the same methods as you, then everything will work out!
 message = 32423
-print 'message (must be < ' + str(n) + '-1):', message
+print ('message (must be < ' + str(n) + '-1):', message)
 
 encrypted_message = (message**e) % n
-print 'encrypted message:', encrypted_message
+print ('encrypted message:', encrypted_message)
 
 decrypted_message = (encrypted_message**d) % n
-print 'decrypted message:', decrypted_message
+print ('decrypted message:', decrypted_message)
 
